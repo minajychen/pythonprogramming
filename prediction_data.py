@@ -7,8 +7,8 @@ import scipy.stats as stats
 
 class PredictionData():
     def __init__(self,file):
-        self.medinc=(np.loadtxt(file,delimiter=',',skiprows=1,dtype=str,usecols=(0))).tolist()
-        self.houseprice=(np.loadtxt(file,delimiter=',',skiprows=1,dtype=str,usecols=(8))).tolist()
+        self.medinc=(np.loadtxt(file,delimiter=',',skiprows=1,dtype=float,usecols=(0))).tolist()
+        self.houseprice=(np.loadtxt(file,delimiter=',',skiprows=1,dtype=float,usecols=(8))).tolist()
         plt.scatter(self.houseprice,self.medinc)
         plt.title("California house prices vs. medium income")
         plt.xlabel('Housing prices')
